@@ -53,7 +53,7 @@ public class localTestBase {
 				screenshots.takeScreenshot(driver, testResult.getName());
 				String path = screenshots.takeScreenshot(driver, testResult.getName());
 				String imagePath = test.addScreenCapture(path);
-				test.log(LogStatus.FAIL, "test failed", imagePath);	
+				test.log(LogStatus.FAIL, "test failed", imagePath);	 
 			}	
 	  driver.quit();
 	  report.endTest(test); 
