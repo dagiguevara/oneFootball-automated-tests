@@ -17,3 +17,10 @@ Suite of automated tests, Selenium-TestNG, Maven
 	```
 	$ mvn versions:display-dependency-updates
 	```
+* To run the tests just run in your project this command in terminal
+	```
+	$ mvn test -U -Psingle
+	
+	```
+	
+* the tests will generate reports, reports are located in /Reports/reports.html.
