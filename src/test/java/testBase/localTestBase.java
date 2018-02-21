@@ -26,6 +26,7 @@ public class localTestBase {
 	/*
 	 * this class will init all the tests for new users
 	 */
+	 
 	  @BeforeMethod (alwaysRun=true)
          public void localTestBase() throws MalformedURLException, InterruptedException {
 	     File appDir = new File("/Users/donaldguevara/Desktop"); //set the path of the apk file 
