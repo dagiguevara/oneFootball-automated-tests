@@ -19,8 +19,8 @@ Suite of automated tests, Selenium-TestNG, Maven
 	```
 * To run the tests just run in your project this command in terminal
 	```
-	$ mvn mvn test -U -Psingle
+	$ mvn test -U -Psingle
 	
 	```
 	
-* the test will generate reports, reports are located in /Reports/reports.html.
+* the tests will generate reports, reports are located in /Reports/reports.html.
