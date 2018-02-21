@@ -26,7 +26,7 @@ public class localTestBase {
 	/*
 	 * this class will init all the tests for new users
 	 */
-	 
+	
 	  @BeforeMethod (alwaysRun=true)
          public void localTestBase() throws MalformedURLException, InterruptedException {
 	     File appDir = new File("/Users/donaldguevara/Desktop"); //set the path of the apk file 
@@ -40,7 +40,7 @@ public class localTestBase {
 	     capabilities.setCapability("appActivity", "de.motain.iliga.activity.FastLaunchSplashScreenActivity");
 	     capabilities.setCapability("app", app.getAbsolutePath()); 
 	     driver =  new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-	     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	     driver.manage().timeouts().implicitlyWait(7, TimeUnit.SECONDS);
 	          
 	     
   }

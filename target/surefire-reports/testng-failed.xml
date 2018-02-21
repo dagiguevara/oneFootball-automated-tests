@@ -10,39 +10,4 @@
       <class name="searchPageTests.TC005_Search_Competition"/>
     </classes>
   </test> <!-- AndroidTest -->
-  <test name="AndroidTest(failed)" parallel="tests">
-    <classes>
-      <class name="searchPageTests.TC004_Search_Player">
-        <methods>
-          <include name="localTestBase"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- searchPageTests.TC004_Search_Player -->
-      <class name="searchPageTests.TC005_Search_Competition">
-        <methods>
-          <include name="localTestBase"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- searchPageTests.TC005_Search_Competition -->
-      <class name="searchPageTests.TC002_invalid_Search">
-        <methods>
-          <include name="localTestBase"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- searchPageTests.TC002_invalid_Search -->
-      <class name="searchPageTests.TC003_Search_Team">
-        <methods>
-          <include name="localTestBase"/>
-          <include name="searchTeam"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- searchPageTests.TC003_Search_Team -->
-      <class name="searchPageTests.TC001_Valid_Search">
-        <methods>
-          <include name="localTestBase"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- searchPageTests.TC001_Valid_Search -->
-    </classes>
-  </test> <!-- AndroidTest(failed) -->
 </suite> <!-- Failed suite [Parallel] -->

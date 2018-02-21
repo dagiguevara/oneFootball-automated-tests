@@ -53,7 +53,15 @@ public class searchPage {
 	
 	
 	public void selectSuggestedTeam() throws InterruptedException {	
-		favoriteTeam.click();
+		try{
+			favoriteTeam.click();
+			   
+	 
+		}catch (Exception e){
+			dismissUpdate.click();
+			favoriteTeam.click();
+	        }
+		
 		getStarted.click();
 			
 	}

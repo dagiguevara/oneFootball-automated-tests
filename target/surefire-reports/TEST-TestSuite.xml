@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="262.822" tests="5" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="208.242" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib"/>
@@ -63,25 +63,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="validSearch" classname="searchPageTests.TC001_Valid_Search" time="16.042"/>
-  <testcase name="Invalid" classname="searchPageTests.TC002_invalid_Search" time="18.978"/>
-  <testcase name="searchTeam" classname="searchPageTests.TC003_Search_Team" time="35.209">
-    <failure message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 35.14 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;&#10;System info: host: &apos;donalds-mbp&apos;, ip: &apos;2003:8c:4f13:2f01:51d8:b1d:fc6b:a871&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.1&apos;, java.version: &apos;1.8.0_144&apos;&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Capabilities [{appPackage=de.motain.iliga, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=33001a4fbfed53cd, platform=LINUX, deviceUDID=33001a4fbfed53cd, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, desired={appPackage=de.motain.iliga, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, platformVersion=7.0, platformName=Android, device=Android, deviceName=Galaxy A5 (2016)}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-A510F, platformName=Android, deviceManufacturer=samsung, device=Android}]&#10;Session ID: 86747a7d-6b23-4b25-8170-36bc449167ae&#10;*** Element info: {Using=id, value=de.motain.iliga:id/onboarding_no_favorite_team}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
-An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 35.14 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'donalds-mbp', ip: '2003:8c:4f13:2f01:51d8:b1d:fc6b:a871', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.1', java.version: '1.8.0_144'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=de.motain.iliga, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=33001a4fbfed53cd, platform=LINUX, deviceUDID=33001a4fbfed53cd, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, desired={appPackage=de.motain.iliga, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, platformVersion=7.0, platformName=Android, device=Android, deviceName=Galaxy A5 (2016)}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-A510F, platformName=Android, deviceManufacturer=samsung, device=Android}]
-Session ID: 86747a7d-6b23-4b25-8170-36bc449167ae
-*** Element info: {Using=id, value=de.motain.iliga:id/onboarding_no_favorite_team}
-	at searchPageTests.TC003_Search_Team.searchTeam(TC003_Search_Team.java:29)
-</failure>
-    <system-err><![CDATA[Feb 21, 2018 7:33:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-]]></system-err>
-  </testcase>
-  <testcase name="searchPlayer" classname="searchPageTests.TC004_Search_Player" time="20.649"/>
-  <testcase name="Search_Competition" classname="searchPageTests.TC005_Search_Competition" time="17.983"/>
+  <testcase name="validSearch" classname="searchPageTests.TC001_Valid_Search" time="17.223"/>
+  <testcase name="Invalid" classname="searchPageTests.TC002_invalid_Search" time="16.017"/>
+  <testcase name="searchTeam" classname="searchPageTests.TC003_Search_Team" time="17.274"/>
+  <testcase name="searchPlayer" classname="searchPageTests.TC004_Search_Player" time="17.83"/>
+  <testcase name="Search_Competition" classname="searchPageTests.TC005_Search_Competition" time="17.223"/>
 </testsuite>
