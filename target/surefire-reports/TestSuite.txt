@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.904 s - in TestSuite
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 262.822 s <<< FAILURE! - in TestSuite
+searchTeam(searchPageTests.TC003_Search_Team)  Time elapsed: 35.209 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 35.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'donalds-mbp', ip: '2003:8c:4f13:2f01:51d8:b1d:fc6b:a871', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.1', java.version: '1.8.0_144'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=de.motain.iliga, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=33001a4fbfed53cd, platform=LINUX, deviceUDID=33001a4fbfed53cd, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, desired={appPackage=de.motain.iliga, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, platformVersion=7.0, platformName=Android, device=Android, deviceName=Galaxy A5 (2016)}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-A510F, platformName=Android, deviceManufacturer=samsung, device=Android}]
+Session ID: 86747a7d-6b23-4b25-8170-36bc449167ae
+*** Element info: {Using=id, value=de.motain.iliga:id/onboarding_no_favorite_team}
+	at searchPageTests.TC003_Search_Team.searchTeam(TC003_Search_Team.java:29)
+

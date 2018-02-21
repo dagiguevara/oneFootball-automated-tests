@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Parallel" thread-count="4" parallel="tests">
-    <test name="ChromeTest">
-        <parameter name="config" value="parallel.conf.json"/>
-        <parameter name="environment" value="chrome"/>
-        <classes>            
-            <class name="searchPageTests.Valid_Search"/> 
-
-         
-        </classes>
+    <test name="AndroidTest">
+       
+       	 	<classes>
+       	 	<class name="searchPageTests.TC001_Valid_Search"/>
+       	 	<class name="searchPageTests.TC002_invalid_Search"/>
+        	    <class name="searchPageTests.TC003_Search_Team"/> 
+        	    <class name="searchPageTests.TC004_Search_Player"/> 
+        	    <class name="searchPageTests.TC005_Search_Competition"/> 
+        		</classes>
     </test>
- 
-  
    
 </suite>

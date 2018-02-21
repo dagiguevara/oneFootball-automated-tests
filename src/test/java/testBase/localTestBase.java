@@ -1,22 +1,27 @@
 package testBase;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import Resources.screenshots;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.remote.MobileCapabilityType;
+
 
 public class localTestBase {
 	
 	 public AndroidDriver<AndroidElement> driver;
+	 public ExtentReports report;
+	 public ExtentTest test;
 	
 	/*
 	 * this class will init all the tests for new users
@@ -39,8 +44,20 @@ public class localTestBase {
 	     
   }
 	  @AfterMethod(alwaysRun=true)
-	  public void tearDown() throws Exception {
+	  public void tearDown(ITestResult testResult) throws IOException {
+		  /*
+		   *  logic to create a screenshot when a test fail
+		   */
+			if (testResult.getStatus() == ITestResult.FAILURE) {
+				screenshots.takeScreenshot(driver, testResult.getName());
+				String path = screenshots.takeScreenshot(driver, testResult.getName());
+				String imagePath = test.addScreenCapture(path);
+				test.log(LogStatus.FAIL, "test failed", imagePath);	
+			}	
 	  driver.quit();
+	  report.endTest(test); 
+	  report.flush(); //creating report
 
+	  
 	  }
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel" thread-count="2" parallel="tests">
+    <test name="SingleTestChrome">
+        <parameter name="config" value=""/>
+        <parameter name="environment" value=""/>
+        <classes>
+            <class name="searchPageTests.TC001_Valid_Search"/> 
+            <class name="searchPageTests.TC002_invalid_Search"/> 
+            <class name="searchPageTests.TC003_Search_Team"/> 
+            <class name="searchPageTests.TC004_Search_Player"/> 
+            <class name="searchPageTests.TC005_Search_Competition"/> 
+        </classes>
+    </test>
+
+    <test name="SingleTestAndroid">
+        <parameter name="config" value="parallel.conf.json"/>
+        <parameter name="environment" value="android"/>
+        <classes>
+            <class name="searchPageTests.TC001_Valid_Search"/> 
+            <class name="searchPageTests.TC002_invalid_Search"/> 
+            <class name="searchPageTests.TC003_Search_Team"/> 
+            <class name="searchPageTests.TC004_Search_Player"/> 
+            <class name="searchPageTests.TC005_Search_Competition"/>  
+        </classes>
+    </test>
+
+    <test name="SingleTestIOS">
+        <parameter name="config" value="parallel.conf.json"/>
+        <parameter name="environment" value="IOS"/>
+        <classes>
+            <class name="searchPageTests.TC001_Valid_Search"/> 
+            <class name="searchPageTests.TC002_invalid_Search"/> 
+            <class name="searchPageTests.TC003_Search_Team"/> 
+            <class name="searchPageTests.TC004_Search_Player"/> 
+            <class name="searchPageTests.TC005_Search_Competition"/> 
+        </classes>
+    </test>
+
+    

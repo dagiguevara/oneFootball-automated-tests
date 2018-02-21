@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Parallel">
-              <span class="suite-name border-passed">Parallel</span>
+              <span class="suite-name border-failed">Parallel</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Parallel">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Parallel" class="hide-methods failed suite-Parallel"> (hide)</a> <!-- hide-methods failed suite-Parallel -->
+                      <a href="#" panel-name="suite-Parallel" class="show-methods failed suite-Parallel"> (show)</a> <!-- show-methods failed suite-Parallel -->
+                    </span>
+                    <div class="method-list-content failed suite-Parallel">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="searchPageTests.TC003_Search_Team" hash-for-method="searchTeam">searchTeam</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Parallel -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +116,22 @@
                     <div class="method-list-content passed suite-Parallel">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="searchPageTests.Valid_Search" hash-for-method="validSearch">validSearch</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="searchPageTests.TC002_invalid_Search" hash-for-method="Invalid">Invalid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="searchPageTests.TC005_Search_Competition" hash-for-method="Search_Competition">Search_Competition</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="searchPageTests.TC004_Search_Player" hash-for-method="searchPlayer">searchPlayer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Parallel" title="searchPageTests.TC001_Valid_Search" hash-for-method="validSearch">validSearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Parallel -->
@@ -117,10 +146,109 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Parallel" class="panel Parallel">
+          <div class="suite-Parallel-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">searchPageTests.TC003_Search_Team</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchTeam">
+                  </a> <!-- searchTeam -->
+                  <span class="method-name">searchTeam</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 35.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;donalds-mbp&apos;, ip: &apos;2003:8c:4f13:2f01:51d8:b1d:fc6b:a871&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.1&apos;, java.version: &apos;1.8.0_144&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=de.motain.iliga, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, deviceScreenSize=1080x1920, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=33001a4fbfed53cd, platform=LINUX, deviceUDID=33001a4fbfed53cd, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, desired={appPackage=de.motain.iliga, appActivity=de.motain.iliga.activity.FastLaunchSplashScreenActivity, app=/Users/donaldguevara/Desktop/app-qa-rc-test.apk, platformVersion=7.0, platformName=Android, device=Android, deviceName=Galaxy A5 (2016)}, platformVersion=7.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=SM-A510F, platformName=Android, deviceManufacturer=samsung, device=Android}]
+Session ID: 86747a7d-6b23-4b25-8170-36bc449167ae
+*** Element info: {Using=id, value=de.motain.iliga:id/onboarding_no_favorite_team}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:64)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy5.click(Unknown Source)
+	at Pages.searchPage.selectSuggestedTeam(searchPage.java:54)
+	at searchPageTests.TC003_Search_Team.searchTeam(TC003_Search_Team.java:29)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parallel-class-failed -->
           <div class="suite-Parallel-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">searchPageTests.Valid_Search</span>
+              <span class="class-name">searchPageTests.TC004_Search_Player</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchPlayer">
+                  </a> <!-- searchPlayer -->
+                  <span class="method-name">searchPlayer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parallel-class-passed -->
+          <div class="suite-Parallel-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">searchPageTests.TC005_Search_Competition</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Search_Competition">
+                  </a> <!-- Search_Competition -->
+                  <span class="method-name">Search_Competition</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parallel-class-passed -->
+          <div class="suite-Parallel-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">searchPageTests.TC002_invalid_Search</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Invalid">
+                  </a> <!-- Invalid -->
+                  <span class="method-name">Invalid</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Parallel-class-passed -->
+          <div class="suite-Parallel-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">searchPageTests.TC001_Valid_Search</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -142,13 +270,50 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;4&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Parallel&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test name=&quot;ChromeTest&quot;&gt;
-    &lt;parameter name=&quot;environment&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;config&quot; value=&quot;parallel.conf.json&quot;/&gt;
+  &lt;test name=&quot;AndroidTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;searchPageTests.Valid_Search&quot;/&gt;
+      &lt;class name=&quot;searchPageTests.TC001_Valid_Search&quot;/&gt;
+      &lt;class name=&quot;searchPageTests.TC002_invalid_Search&quot;/&gt;
+      &lt;class name=&quot;searchPageTests.TC003_Search_Team&quot;/&gt;
+      &lt;class name=&quot;searchPageTests.TC004_Search_Player&quot;/&gt;
+      &lt;class name=&quot;searchPageTests.TC005_Search_Competition&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
+  &lt;/test&gt; &lt;!-- AndroidTest --&gt;
+  &lt;test name=&quot;AndroidTest(failed)&quot; parallel=&quot;tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;searchPageTests.TC004_Search_Player&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;localTestBase&quot;/&gt;
+          &lt;include name=&quot;tearDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- searchPageTests.TC004_Search_Player --&gt;
+      &lt;class name=&quot;searchPageTests.TC005_Search_Competition&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;localTestBase&quot;/&gt;
+          &lt;include name=&quot;tearDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- searchPageTests.TC005_Search_Competition --&gt;
+      &lt;class name=&quot;searchPageTests.TC002_invalid_Search&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;localTestBase&quot;/&gt;
+          &lt;include name=&quot;tearDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- searchPageTests.TC002_invalid_Search --&gt;
+      &lt;class name=&quot;searchPageTests.TC003_Search_Team&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;localTestBase&quot;/&gt;
+          &lt;include name=&quot;searchTeam&quot;/&gt;
+          &lt;include name=&quot;tearDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- searchPageTests.TC003_Search_Team --&gt;
+      &lt;class name=&quot;searchPageTests.TC001_Valid_Search&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;localTestBase&quot;/&gt;
+          &lt;include name=&quot;tearDown&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- searchPageTests.TC001_Valid_Search --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- AndroidTest(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Parallel --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -160,7 +325,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ChromeTest (1 class)</span>
+                <span class="test-name">AndroidTest (5 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">AndroidTest(failed) (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -186,16 +354,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validSearch')
-data.setCell(0, 2, 'searchPageTests.Valid_Search')
-data.setCell(0, 3, 17057);
+data.setCell(0, 1, 'searchTeam')
+data.setCell(0, 2, 'searchPageTests.TC003_Search_Team')
+data.setCell(0, 3, 35201);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'searchPlayer')
+data.setCell(1, 2, 'searchPageTests.TC004_Search_Player')
+data.setCell(1, 3, 20649);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Invalid')
+data.setCell(2, 2, 'searchPageTests.TC002_invalid_Search')
+data.setCell(2, 3, 18977);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Search_Competition')
+data.setCell(3, 2, 'searchPageTests.TC005_Search_Competition')
+data.setCell(3, 3, 17982);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validSearch')
+data.setCell(4, 2, 'searchPageTests.TC001_Valid_Search')
+data.setCell(4, 3, 16044);
 window.suiteTableData['Parallel']= { tableData: data, tableDiv: 'times-div-Parallel'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Parallel">
               </div> <!-- times-div-Parallel -->
             </div> <!-- times-div -->
@@ -221,18 +405,80 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">searchPageTests.Valid_Search</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">searchPageTests.TC001_Valid_Search</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">localTestBase</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">validSearch</span>
-                <span class="method-start">9649 ms</span>
+                <span class="method-start">26793 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">26706 ms</span>
+                <span class="method-name">tearDown([TestResult name=validSearch status=SUCCESS method=TC001_Valid_Search.validSearch()[pri:0, instance:...)</span>
+                <span class="method-start">42838 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">searchPageTests.TC002_invalid_Search</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">localTestBase</span>
+                <span class="method-start">48182 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Invalid</span>
+                <span class="method-start">69065 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Invalid status=SUCCESS method=TC002_invalid_Search.Invalid()[pri:0, instance:search...)</span>
+                <span class="method-start">88043 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">searchPageTests.TC003_Search_Team</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">localTestBase</span>
+                <span class="method-start">93224 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">searchTeam</span>
+                <span class="method-start">118214 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=searchTeam status=FAILURE method=TC003_Search_Team.searchTeam()[pri:0, instance:sea...)</span>
+                <span class="method-start">153422 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">searchPageTests.TC004_Search_Player</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">localTestBase</span>
+                <span class="method-start">164576 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchPlayer</span>
+                <span class="method-start">189186 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=searchPlayer status=SUCCESS method=TC004_Search_Player.searchPlayer()[pri:0, instan...)</span>
+                <span class="method-start">209836 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">searchPageTests.TC005_Search_Competition</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">localTestBase</span>
+                <span class="method-start">214970 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Search_Competition</span>
+                <span class="method-start">237782 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Search_Competition status=SUCCESS method=TC005_Search_Competition.Search_Competitio...)</span>
+                <span class="method-start">255765 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

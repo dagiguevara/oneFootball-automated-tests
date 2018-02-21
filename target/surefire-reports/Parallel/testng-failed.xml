@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="4" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Parallel]" parallel="tests">
-  <parameter name="environment" value="chrome"/>
-  <parameter name="config" value="parallel.conf.json"/>
-  <test name="ChromeTest">
-    <parameter name="environment" value="chrome"/>
-    <parameter name="config" value="parallel.conf.json"/>
+  <test name="AndroidTest">
     <classes>
-      <class name="searchPageTests.Valid_Search"/>
+      <class name="searchPageTests.TC001_Valid_Search"/>
+      <class name="searchPageTests.TC002_invalid_Search"/>
+      <class name="searchPageTests.TC003_Search_Team"/>
+      <class name="searchPageTests.TC004_Search_Player"/>
+      <class name="searchPageTests.TC005_Search_Competition"/>
     </classes>
-  </test> <!-- ChromeTest -->
+  </test> <!-- AndroidTest -->
+  <test name="AndroidTest(failed)" parallel="tests">
+    <classes>
+      <class name="searchPageTests.TC004_Search_Player">
+        <methods>
+          <include name="localTestBase"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- searchPageTests.TC004_Search_Player -->
+      <class name="searchPageTests.TC005_Search_Competition">
+        <methods>
+          <include name="localTestBase"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- searchPageTests.TC005_Search_Competition -->
+      <class name="searchPageTests.TC002_invalid_Search">
+        <methods>
+          <include name="localTestBase"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- searchPageTests.TC002_invalid_Search -->
+      <class name="searchPageTests.TC003_Search_Team">
+        <methods>
+          <include name="localTestBase"/>
+          <include name="searchTeam"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- searchPageTests.TC003_Search_Team -->
+      <class name="searchPageTests.TC001_Valid_Search">
+        <methods>
+          <include name="localTestBase"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- searchPageTests.TC001_Valid_Search -->
+    </classes>
+  </test> <!-- AndroidTest(failed) -->
 </suite> <!-- Failed suite [Parallel] -->
