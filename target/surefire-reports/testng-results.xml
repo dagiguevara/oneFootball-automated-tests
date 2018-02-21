@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Parallel" duration-ms="28582" started-at="2018-02-21T11:14:24Z" finished-at="2018-02-21T11:14:53Z">
+    <groups>
+    </groups>
+    <test name="ChromeTest" duration-ms="28582" started-at="2018-02-21T11:14:24Z" finished-at="2018-02-21T11:14:53Z">
+      <class name="searchPageTests.Valid_Search">
+        <test-method status="PASS" signature="localTestBase()[pri:0, instance:searchPageTests.Valid_Search@6537cf78]" name="localTestBase" is-config="true" duration-ms="9649" started-at="2018-02-21T12:14:24Z" finished-at="2018-02-21T12:14:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- localTestBase -->
+        <test-method status="PASS" signature="validSearch()[pri:0, instance:searchPageTests.Valid_Search@6537cf78]" name="validSearch" duration-ms="17057" started-at="2018-02-21T12:14:34Z" finished-at="2018-02-21T12:14:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:searchPageTests.Valid_Search@6537cf78]" name="tearDown" is-config="true" duration-ms="1868" started-at="2018-02-21T12:14:51Z" finished-at="2018-02-21T12:14:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- searchPageTests.Valid_Search -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- Parallel -->
+</testng-results>

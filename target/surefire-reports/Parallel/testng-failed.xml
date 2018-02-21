@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Parallel]" parallel="tests">
+  <parameter name="environment" value="chrome"/>
+  <parameter name="config" value="parallel.conf.json"/>
+  <test name="ChromeTest">
+    <parameter name="environment" value="chrome"/>
+    <parameter name="config" value="parallel.conf.json"/>
+    <classes>
+      <class name="searchPageTests.Valid_Search"/>
+    </classes>
+  </test> <!-- ChromeTest -->
+</suite> <!-- Failed suite [Parallel] -->
